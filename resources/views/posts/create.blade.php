@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <input type="text" name="content" class="form-control" value=""/>
+                        <input type="text" name="content" id="content" class="form-control" value=""/>
                     </div>
                     <div class="form-group">
                         <label for="is_published">Published</label>
@@ -41,4 +41,6 @@
             </div>
         </div>
     </div>
+    <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+    <script>CKEDITOR.replace('content');</script>
 @endsection

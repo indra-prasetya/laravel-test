@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ $post ? $post->title : "indra.prasetya" }}</title>
+        <title>{{ Request::is('posts/show') ? $post->title : "indra.prasetya" }}</title>
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ elixir('css/application.css') }}" rel="stylesheet">
@@ -60,15 +60,15 @@
                     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                         <div class='site-heading post-heading'>
                             <h1>                                
-                                {{ $post ? $post->title : "indra.prasetya" }}
+                                {{ Request::is('posts/show') ? $post->title : "indra.prasetya" }}
                             </h1>
                             <hr class='small'>
                             <span class='subheading'>
-                                {{ $post ? $post->description : "Yet another useless blog" }}
+                                {{ Request::is('posts/show') ? $post->description : "Yet another useless blog" }}
                             </span>
-                            @if ($post and $post->created_on)
+                            @if (Request::is('posts/show'))
                                 <span class='meta'>
-                                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> on {{ $post->created_on }}
+                                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> on {{ $post->created_at }}
                                 </span>
                             @endif
                         </div>
