@@ -1,0 +1,4 @@
+php artisan make:scaffold Post --schema="title:string, category_id:integer:unsigned:index, slug:string, description:text, content:text, is_published:boolean"
+php artisan make:model Tag
+php artisan make:model Category
+php artisan make:model Option

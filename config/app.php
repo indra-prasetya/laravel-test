@@ -135,6 +135,8 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+		'Laralib\L5scaffold\GeneratorsServiceProvider',
+		'Frenzy\Turbolinks\TurbolinksServiceProvider',
 
 		/*
 		 * Application Service Providers...

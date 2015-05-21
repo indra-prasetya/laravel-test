@@ -1,11 +1,60 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d06d26dec617490c4f674bd4fb580c62",
+    "hash": "49519937c6de381b1ecea90422a9da27",
     "packages": [
+        {
+            "name": "barryvdh/laravel-stack-middleware",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-stack-middleware.git",
+                "reference": "40b2917fdb62a46a3352ccc927e9c8e9016a5cbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-stack-middleware/zipball/40b2917fdb62a46a3352ccc927e9c8e9016a5cbe",
+                "reference": "40b2917fdb62a46a3352ccc927e9c8e9016a5cbe",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.0.x",
+                "php": ">=5.4.0",
+                "symfony/http-kernel": "~2.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\StackMiddleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Stack Middleware for Laravel 5",
+            "keywords": [
+                "StackPHP",
+                "laravel",
+                "middleware",
+                "stack"
+            ],
+            "time": "2015-02-18 08:01:48"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "1.2.0",
@@ -221,6 +270,114 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
+        },
+        {
+            "name": "frenzy/turbolinks",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frenzyapp/turbolinks.git",
+                "reference": "165ec04f1f4ced068f7900056d8e918bf1163a98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frenzyapp/turbolinks/zipball/165ec04f1f4ced068f7900056d8e918bf1163a98",
+                "reference": "165ec04f1f4ced068f7900056d8e918bf1163a98",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/laravel-stack-middleware": "~0.2.0",
+                "helthe/turbolinks": "~1.4",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Frenzy\\Turbolinks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Studio Frénétic",
+                    "email": "info@studiofrenetic.com"
+                },
+                {
+                    "name": "Tortue Torche",
+                    "email": "tortuetorche@spam.me"
+                }
+            ],
+            "description": "Frenzy Turbolinks makes following links in your web application faster with Laravel 5.0",
+            "keywords": [
+                "ajax",
+                "asset",
+                "javascript",
+                "jquery",
+                "jquery.turbolinks",
+                "larasset",
+                "laravel",
+                "laravel 5",
+                "pjax",
+                "turbolinks"
+            ],
+            "time": "2015-03-14 11:29:22"
+        },
+        {
+            "name": "helthe/turbolinks",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helthe/Turbolinks.git",
+                "reference": "aea314ebb3116074ddcdd948ca349fc6deef269e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helthe/Turbolinks/zipball/aea314ebb3116074ddcdd948ca349fc6deef269e",
+                "reference": "aea314ebb3116074ddcdd948ca349fc6deef269e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/http-foundation": "~2.3"
+            },
+            "require-dev": {
+                "symfony/http-kernel": "~2.3"
+            },
+            "suggest": {
+                "symfony/http-kernel": "Required for usage with the Symfony HttpKernel Component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Helthe\\Component\\Turbolinks\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carl Alexander",
+                    "email": "carlalexander@helthe.co"
+                }
+            ],
+            "description": "Helthe Turbolinks Component",
+            "homepage": "https://helthe.co",
+            "keywords": [
+                "jquery.turbolinks",
+                "turbolinks"
+            ],
+            "time": "2014-12-10 14:32:54"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1785,6 +1942,49 @@
             "time": "2014-10-13 12:58:55"
         },
         {
+            "name": "laralib/l5scaffold",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laralib/l5scaffold.git",
+                "reference": "6b2498577c202482abd7293c9c4961449f77c93e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laralib/l5scaffold/zipball/6b2498577c202482abd7293c9c4961449f77c93e",
+                "reference": "6b2498577c202482abd7293c9c4961449f77c93e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laralib\\L5scaffold\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fernando Brito",
+                    "email": "fernandobritofl@gmail.com"
+                }
+            ],
+            "description": "Extend Laravel 5's generators scaffold.",
+            "keywords": [
+                "generators",
+                "laravel",
+                "laravel5",
+                "scaffold"
+            ],
+            "time": "2015-04-29 01:15:40"
+        },
+        {
             "name": "phpdocumentor/reflection-docblock",
             "version": "2.0.4",
             "source": {
@@ -2794,7 +2994,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "frenzy/turbolinks": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
