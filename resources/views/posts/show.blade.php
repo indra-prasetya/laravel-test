@@ -9,23 +9,11 @@
                 </article>
     
                 <hr/>
-                
+    
                 <div id='disqus_thread'></div>
     
-                <script>
-                    var disqus_shortname = 'socialenemy';
-                    var disqus_identifier = 'lv-{{ $post->id }}';
-                    (function() {
-                        var dsq = document.createElement('script');
-                        dsq.type = 'text/javascript';
-                        dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
-        
                 <div class='pull-right'>
-                    <a class="btn btn-primary" href="{{ route('posts.index') }}">Back</a>
+                    <a class="btn btn-primary" href="{{ URL::previous() }}">Back</a>    
                     @unless (Auth::guest())
                     <a class="btn btn-primary " href="{{ route('posts.edit', $post->id) }}">Edit</a>
                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display: inline;" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
@@ -40,4 +28,16 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        var disqus_shortname = 'socialenemy';
+        var disqus_identifier = 'lv-{{ $post->id }}';
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })(); 
+    </script>
 @endsection
