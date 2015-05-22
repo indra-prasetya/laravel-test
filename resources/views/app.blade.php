@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ Request::is('posts/show') ? $post->title : "indra.prasetya" }}</title>
+        <title>{{ isset($is_post)  ? $post->title : "indra.prasetya" }}</title>
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ elixir('css/application.css') }}" rel="stylesheet">
@@ -61,14 +61,14 @@
                 <div class='row'>
                     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                         <div class='site-heading post-heading'>
-                            <h1>                                
-                                {{ Request::is('posts/show') ? $post->title : "indra.prasetya" }}
+                            <h1>
+                                {{ isset($is_post)  ? $post->title : "indra.prasetya" }}
                             </h1>
                             <hr class='small'>
                             <span class='subheading'>
-                                {{ Request::is('posts/show') ? $post->description : "Yet another useless blog" }}
+                                {{ isset($is_post)  ? $post->description : "Yet another useless blog" }}
                             </span>
-                            @if (Request::is('posts/show'))
+                            @if ( isset($is_post) )
                                 <span class='meta'>
                                     Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> on {{ $post->created_at }}
                                 </span>
@@ -101,7 +101,7 @@
                         <p class='copyright text-muted'>
                             <i class="fa fa-code"></i> with <em>Laravel</em> on <em>OpenShift</em>
                         </p>
-                        @unless (Auth::guest())
+                        @unless ( Auth::guest() )
                             <p class='text-center' style='font-size: 12px;'>
                                 <a href="{{ url('/posts/create') }}"><i class="fa fa-pencil-square-o"></i></a> | <a href="{{ url('/auth/logout') }}"><i class="fa fa-sign-out"></i></a>
                             </p>

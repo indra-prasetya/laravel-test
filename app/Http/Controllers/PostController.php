@@ -88,11 +88,12 @@ class PostController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($slug)
 	{
-		$post = Post::findOrFail($id);
+		$post = Post::where('slug','=',$slug)->firstOrFail();		
+		$is_post = true;
 
-		return view('posts.show', compact('post'));
+		return view('posts.show', compact('post', 'is_post'));
 	}
 
 	/**
@@ -104,6 +105,7 @@ class PostController extends Controller {
 	public function edit($id)
 	{
 		$post = Post::findOrFail($id);
+		$is_post = true;
 		$categories = Category::where('is_active', '=', true);
 
 		return view('posts.edit', compact('post', 'categories'));

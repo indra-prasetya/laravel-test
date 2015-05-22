@@ -15,10 +15,13 @@ Route::get('/', 'PostController@index');
 Route::get('/life', 'PostController@life');
 Route::get('/code', 'PostController@code');
 Route::get('/about', 'PostController@about');
+Route::get('/home', 'PostController@index');
+
+Route::get('/posts/{slug}', 'PostController@show');
 
 Route::resource("posts","PostController");
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	// 'password' => 'Auth\PasswordController',
 ]);
