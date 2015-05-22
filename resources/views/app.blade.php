@@ -23,6 +23,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="{{ elixir('js/application.js') }}"></script>
+        
+        @yield('head')
     </head>
     <body>
         <nav class='navbar navbar-default navbar-custom navbar-fixed-top'>
@@ -87,22 +89,21 @@
                     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                         <ul class='list-inline text-center'>
                             <li>
-                                <a href='#'> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-twitter fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='https://twitter.com/punya_indra' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-twitter fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='#'> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-facebook fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='#' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-facebook fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='#'> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='#' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                         </ul>
                         <p class='copyright text-muted'>
-                            &lt;/&gt; with <em>Laravel</em> on <em>OpenShift</em>
+                            <i class="fa fa-code"></i> with <em>Laravel</em> on <em>OpenShift</em>
                         </p>
                         @unless (Auth::guest())
                             <p class='text-center' style='font-size: 12px;'>
-                                <a href="{{ url('/posts/create') }}">New Content</a>
-                                <a href="{{ url('/auth/logout') }}">Logout</a>
+                                <a href="{{ url('/posts/create') }}"><i class="fa fa-pencil-square-o"></i></a> | <a href="{{ url('/auth/logout') }}"><i class="fa fa-sign-out"></i></a>
                             </p>
                         @endunless
                     </div>

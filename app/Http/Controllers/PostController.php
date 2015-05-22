@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller {
@@ -55,7 +56,8 @@ class PostController extends Controller {
 	 */
 	public function create()
 	{
-		return view('posts.create');
+		$categories = Category::where('is_active', '=', true)->get();
+		return view('posts.create', compact('categories'));
 	}
 
 	/**
@@ -102,8 +104,9 @@ class PostController extends Controller {
 	public function edit($id)
 	{
 		$post = Post::findOrFail($id);
+		$categories = Category::where('is_active', '=', true);
 
-		return view('posts.edit', compact('post'));
+		return view('posts.edit', compact('post', 'categories'));
 	}
 
 	/**
