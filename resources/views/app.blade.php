@@ -97,7 +97,7 @@
                             </li>
                         </ul>
                         <p class='copyright text-muted'>
-                            &lt;/&gt; with <em>Rails</em> on <em>OpenShift</em>
+                            &lt;/&gt; with <em>Laravel</em> on <em>OpenShift</em>
                         </p>
                         @unless (Auth::guest())
                             <p class='text-center' style='font-size: 12px;'>

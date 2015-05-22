@@ -8,9 +8,9 @@
 				<div class="alert alert-danger">
 					<ul>
 						@foreach ($errors->all() as $error)
-						<li>
-							{{ $error }}
-						</li>
+    						<li>
+    							{{ $error }}
+    						</li>
 						@endforeach
 					</ul>
 				</div>
@@ -38,7 +38,7 @@
 							<div class="checkbox">
 								<label>
 									<input type="checkbox" name="remember">
-									Remember Me </label>
+								Remember Me </label>
 							</div>
 						</div>
 					</div>
