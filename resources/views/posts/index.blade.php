@@ -15,7 +15,7 @@
 	                    </h3>
 	                </a>
 	                <p class="post-meta">
-	                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> on {{ $post->created_at }}
+	                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
 	                </p>
 	            </div>
 	            <hr>

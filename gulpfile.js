@@ -25,7 +25,8 @@ elixir(function(mix) {
         'turbolinks.js',
         'nprogress.js',
         'clean-blog.js',
-        'app.js'
+        'jquery.nicescroll.min.js',
+        'app.js',
     ], 'public/js/application.js', 'public/js');
     
     mix.version(["public/js/application.js", "public/css/application.css"]);

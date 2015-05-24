@@ -13,8 +13,6 @@
         <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -70,7 +68,7 @@
                             </span>
                             @if ( isset($is_post) )
                                 <span class='meta'>
-                                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> on {{ $post->created_at }}
+                                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK">Indra</a> <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
                                 </span>
                             @endif
                         </div>
@@ -92,10 +90,10 @@
                                 <a href='https://twitter.com/punya_indra' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-twitter fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='#' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-facebook fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='https://www.facebook.com/socialenemy' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-facebook fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='#' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='https://github.com/socialenemy/' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                         </ul>
                         <p class='copyright text-muted'>

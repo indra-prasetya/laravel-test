@@ -1,12 +1,19 @@
-jQuery(function() {
-  jQuery(document).on('page:fetch',   function() { NProgress.start();  });
-  jQuery(document).on('page:receive', function() { NProgress.set(1); });
-  jQuery(document).on('page:change',  function() { NProgress.done();   });
-  jQuery(document).on('page:restore', function() { NProgress.remove(); });
+jQuery(function($) {
+  $(document).on('page:fetch',   function() { NProgress.start();  });
+  $(document).on('page:receive', function() { NProgress.set(1); });
+  $(document).on('page:change',  function() { NProgress.done();   });
+  $(document).on('page:restore', function() { NProgress.remove(); });
+  
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  $("html").niceScroll();
 });
 
 NProgress.configure({
-  showSpinner: false,
+  showSpinner: true,
   ease: 'ease',
   speed: 500
 });
+
+
+
