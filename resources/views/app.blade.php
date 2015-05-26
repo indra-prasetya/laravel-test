@@ -77,7 +77,7 @@
             </div>
         </header>
 
-        <section>
+        <section id="content">
             @yield('content')
         </section>
 

@@ -2395,10 +2395,10 @@ e)})}});e.fn.getNiceScroll=function(k){return"undefined"==typeof k?new C(this):e
 e(this):c.doc,k=new N(c,e(this)),e(this).data("__nicescroll",k));h.push(k)});return 1==h.length?h[0]:h};window.NiceScroll={getjQuery:function(){return e}};e.nicescroll||(e.nicescroll=new C,e.nicescroll.options=F)})(jQuery);
 
 jQuery(function($) {
-  $(document).on('page:fetch',   function() { NProgress.start();  });
+  $(document).on('page:fetch',   function() { $('#content').fadeOut('slow'); NProgress.start();  });
   $(document).on('page:receive', function() { NProgress.set(1); });
-  $(document).on('page:change',  function() { NProgress.done();   });
-  $(document).on('page:restore', function() { NProgress.remove(); });
+  $(document).on('page:change',  function() { NProgress.done(); });
+  $(document).on('page:restore', function() { $('#content').fadeIn('slow'); NProgress.remove(); });
   
   $('[data-toggle="tooltip"]').tooltip();
   

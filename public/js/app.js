@@ -10,7 +10,7 @@ jQuery(function($) {
 });
 
 NProgress.configure({
-  showSpinner: true,
+  showSpinner: false,
   ease: 'ease',
   speed: 500
 });
