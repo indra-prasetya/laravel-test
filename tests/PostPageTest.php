@@ -9,7 +9,7 @@ class PostPageTest extends TestCase {
 	 */
 	public function testPostIndexPageExample()
 	{
-		$response = $this->call('GET', '/');
+		$response = $this->call('GET', '/posts');
 
 		$this->assertEquals(200, $response->getStatusCode());
 	}

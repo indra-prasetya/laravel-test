@@ -30,27 +30,7 @@
     </div>
     
     <script>
-
-    if(typeof DISQUS === "undefined"){
-        var disqus_shortname = 'socialenemy';
-        var disqus_identifier = 'lv-{{ $post->id }}';
-        
-        (function() {
-            var dsq = document.createElement('script'); 
-            dsq.type = 'text/javascript'; 
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    } else {
-        DISQUS.reset({
-          reload: true,
-          config: function () {
-            this.page.identifier = document.title;
-            this.page.url = location.href;
-          }
-        });
-    }
+    	if("undefined"==typeof DISQUS){var disqus_shortname="socialenemy",disqus_identifier="lv-{{ $post->id }}";!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}()}else DISQUS.reset({reload:!0,config:function(){this.page.identifier=document.title,this.page.url=location.href}});
 	</script>
-	
+	<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 @endsection
