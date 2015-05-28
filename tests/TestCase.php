@@ -5,10 +5,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 	public function setUp()
 	{
 	    parent::setUp();
-	
-	    Artisan::call('migrate');
-	    Artisan::call('db:seed');
-	    Mail::pretend(true);		
+		$this->prepareForTests();
 	}
 	
 	/**
@@ -17,7 +14,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 	 * @return \Illuminate\Foundation\Application
 	 */
 	public function createApplication()
-	{
+	{		
 		$app = require __DIR__.'/../bootstrap/app.php';
 
 		$app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
@@ -25,4 +22,10 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 		return $app;
 	}
 
+	private function prepareForTests()
+	{		
+	    Artisan::call('migrate');
+	    Artisan::call('db:seed');
+	    Mail::pretend(true);	
+	}
 }
