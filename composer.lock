@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a927921d60e27ca36a19e7b7b8c3af26",
+    "hash": "70bac567aaf0d4e7f10f56ac9da2476f",
     "packages": [
         {
             "name": "barryvdh/laravel-stack-middleware",
