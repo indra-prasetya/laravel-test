@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class PostController extends Controller {
 	
@@ -148,4 +149,21 @@ class PostController extends Controller {
 		return redirect()->route('posts.index')->with('message', 'Item deleted successfully.');
 	}
 
+	public function sitemap()
+	{
+		$sitemap = App::make("sitemap");
+
+		$sitemap->add(URL::to('/'), '2013-11-16T12:30:00+02:00', '1.0', 'daily');
+		$sitemap->add(URL::to('about'), '2013-11-16T12:30:00+02:00', '0.7', 'monthly');
+		$sitemap->add(URL::to('life'), '2013-11-16T12:30:00+02:00', '0.7', 'monthly');
+		$sitemap->add(URL::to('code'), '2013-11-16T12:30:00+02:00', '0.7', 'monthly');		
+		
+		$posts = Post::all();
+		
+		foreach($posts as $post) {
+		  $sitemap->add(URL::to("post/{$post->slug}"), $post->created_at, '0.9', 'weekly');
+		}
+		
+		return $sitemap->render('xml');
+	}
 }

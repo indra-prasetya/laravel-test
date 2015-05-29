@@ -1,9 +1,5 @@
 @extends('app')
 
-@section('head')
-    <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
-@endsection
-
 @section('content')
     <div class='container'>
         <div class='row'>
@@ -38,11 +34,11 @@
                     </div>
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <textarea name="content" id="content" class="form-control">{{$post->content}}</textarea>
+                        <textarea name="content" id="post_content" class="form-control">{{$post->content}}</textarea>
                     </div>
                     <div class="checkbox">
                         <label></label>
-                        <input type="checkbox" name="is_published" value="{{$post->is_published}}"/>Published
+                        <input type="checkbox" name="is_published" value="1" checked={{$post->is_published? 'checked' : ''}}/>Published
                     </div>
     
                     <a class="btn btn-default" href="{{ route('posts.index') }}">Back</a>
@@ -60,7 +56,7 @@
 			    $("#slug").val(text);        
 			});
 			
-    		CKEDITOR.replace('content');
+    		CKEDITOR.replace('post_content');
     	})
     </script>
 @endsection

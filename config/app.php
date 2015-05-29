@@ -125,18 +125,19 @@ return [
 		'Illuminate\Filesystem\FilesystemServiceProvider',
 		'Illuminate\Foundation\Providers\FoundationServiceProvider',
 		'Illuminate\Hashing\HashServiceProvider',
-		'Illuminate\Mail\MailServiceProvider',
+		//'Illuminate\Mail\MailServiceProvider',
 		'Illuminate\Pagination\PaginationServiceProvider',
 		'Illuminate\Pipeline\PipelineServiceProvider',
 		'Illuminate\Queue\QueueServiceProvider',
-		'Illuminate\Redis\RedisServiceProvider',
+		//'Illuminate\Redis\RedisServiceProvider',
 		'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
 		'Illuminate\Session\SessionServiceProvider',
 		'Illuminate\Translation\TranslationServiceProvider',
-		'Illuminate\Validation\ValidationServiceProvider',
+		//'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Laralib\L5scaffold\GeneratorsServiceProvider',
 		'Frenzy\Turbolinks\TurbolinksServiceProvider',
+		'Roumen\Sitemap\SitemapServiceProvider',
 
 		/*
 		 * Application Service Providers...

@@ -1,6 +1,6 @@
 jQuery(function($) {
   $(document).on('page:fetch',   function() { NProgress.start();  });
-  $(document).on('page:receive', function() { NProgress.set(1); });
+  $(document).on('page:receive', function() { NProgress.set(0.5); });
   $(document).on('page:change',  function() { NProgress.done();   });
   $(document).on('page:restore', function() { NProgress.remove(); });
   
@@ -12,7 +12,7 @@ jQuery(function($) {
 NProgress.configure({
   showSpinner: false,
   ease: 'ease',
-  speed: 500
+  speed: 1500
 });
 
 

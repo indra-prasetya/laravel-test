@@ -22,7 +22,9 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="{{ elixir('js/application.js') }}"></script>
         
-        @yield('head')
+        @unless ( Auth::guest() )
+        	<script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+        @endunless
     </head>
     <body>
         <nav class='navbar navbar-default navbar-custom navbar-fixed-top'>
@@ -87,14 +89,18 @@
                     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                         <ul class='list-inline text-center'>
                             <li>
-                                <a href='https://twitter.com/punya_indra' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-twitter fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='https://twitter.com/punya_indra' rel="nofollow" target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-twitter fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='https://www.facebook.com/socialenemy' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-facebook fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='https://www.facebook.com/socialenemy' rel="nofollow" target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-facebook fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='https://github.com/socialenemy/' target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='https://github.com/socialenemy/' rel="nofollow" target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
+                            <li>
+                                <a href='{{ url('/sitemap') }}'> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-rss fa-stack-1x fa-inverse'></i> </span> </a>
+                            </li>
+
                         </ul>
                         <p class='copyright text-muted'>
                             <i class="fa fa-code"></i> with <em>Laravel</em> on <em>OpenShift</em>
