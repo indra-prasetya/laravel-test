@@ -66,7 +66,7 @@
                             </h1>
                             <hr class='small'>
                             <span class='subheading'>
-                                {{ isset($is_post)  ? $post->description : "Yet another useless blog" }}
+                                {{ isset($is_post)  ? $post->description : "// Geek and nerd combined" }}
                             </span>
                             @if ( isset($is_post) )
                                 <span class='meta'>

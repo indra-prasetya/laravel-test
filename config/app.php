@@ -133,7 +133,7 @@ return [
 		'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
 		'Illuminate\Session\SessionServiceProvider',
 		'Illuminate\Translation\TranslationServiceProvider',
-		//'Illuminate\Validation\ValidationServiceProvider',
+		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Laralib\L5scaffold\GeneratorsServiceProvider',
 		'Frenzy\Turbolinks\TurbolinksServiceProvider',
