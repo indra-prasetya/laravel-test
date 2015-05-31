@@ -24,7 +24,7 @@
                         <label for="content" id="post_content_label" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Add class 'prettyprint' for code highlighting">Content </label>
                         <select name="category_id" class="form-control">
                         	@foreach ($categories as $category)
-                        		<option value='{{ $category->id }}' selected='{{$post->category_id == $category->id ? 'selected' : ''}}'>{{ $category->name }}</option>
+                        		<option value='{{ $category->id }}' {{$post->category_id == $category->id ? 'selected' : ''}}>{{ $category->name }}</option>
 							@endforeach                        	
                         </select>
                     </div>
