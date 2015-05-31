@@ -98,7 +98,7 @@
                                 <a href='https://github.com/socialenemy/' rel="nofollow" target="_BLANK"> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-github fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
                             <li>
-                                <a href='{{ url('/sitemap') }}'> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-rss fa-stack-1x fa-inverse'></i> </span> </a>
+                                <a href='{{ url('/sitemap.xml') }}'> <span class='fa-stack fa-lg'> <i class='fa fa-circle fa-stack-2x'></i> <i class='fa fa-rss fa-stack-1x fa-inverse'></i> </span> </a>
                             </li>
 
                         </ul>

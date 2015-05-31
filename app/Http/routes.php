@@ -20,7 +20,7 @@ Route::get('/home', 'PostController@index');
 Route::get('/post/{slug}', 'PostController@show');
 Route::resource("posts","PostController");
 
-Route::get('/sitemap', function(){
+Route::get('/sitemap.xml', function(){
 	$sitemap = App::make("sitemap" );
 
 	$sitemap->add(URL::to('/'), '2013-11-16T12:30:00+02:00', '1.0', 'daily');
