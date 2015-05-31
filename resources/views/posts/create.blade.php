@@ -31,7 +31,7 @@
                         <textarea name="description" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="content">Content</label>
+                        <label for="content" id="post_content_label" data-container="body" data-toggle="popover" data-placement="right" data-content="Add class 'prettyprint' for code highlighting">Content </label>
                         <textarea name="content" id="post_content" class="form-control"></textarea>
                     </div>
                     <div class="checkbox">
@@ -53,6 +53,7 @@
 			    text = text.replace(/[^a-zA-Z0-9]+/g,'-');
 			    $("#slug").val(text);        
 			});
+			$("#post_content_label").popover();
 			
     		CKEDITOR.replace('post_content');
     	})

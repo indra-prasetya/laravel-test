@@ -107,7 +107,7 @@ class PostController extends Controller {
 	{
 		$post = Post::findOrFail($id);
 		$is_post = true;
-		$categories = Category::where('is_active', '=', true);
+		$categories = Category::where('is_active', '=', true)->get();
 
 		return view('posts.edit', compact('post', 'categories'));
 	}
