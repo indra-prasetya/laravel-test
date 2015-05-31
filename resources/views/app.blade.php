@@ -65,8 +65,8 @@
                                 {{ isset($is_post)  ? $post->title : "indra.prasetya" }}
                             </h1>
                             <hr class='small'>
-                            <span class='subheading'>
-                                {{ isset($is_post)  ? $post->description : "// TODO: Some kickass tagline here" }}
+                            <span class='subheading small'>
+                                {!! isset($is_post)  ? $post->description : "// <span style='color:#E2AC4F'>TODO</span>: Some kickass tagline here" !!}
                             </span>
                             @if ( isset($is_post) )
                                 <span class='meta'>

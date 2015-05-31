@@ -197,7 +197,7 @@ hr.small {
   font-family: 'Lora', 'Times New Roman', serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
 }
 .intro-header .post-heading .meta a {
   color: white;
@@ -230,7 +230,7 @@ hr.small {
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   margin-top: 0;
 }
@@ -392,4 +392,16 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #0085a1;
+}
+
+@media only screen and (max-width: 768px) {
+  .intro-header .post-heading .subheading {
+  	font-size: 20px;
+  }
+  .intro-header .post-heading .meta {
+	font-size: 14px;
+  }
+  body {
+  	font-size: 18px;
+  }
 }
