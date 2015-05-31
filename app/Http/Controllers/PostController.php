@@ -27,25 +27,25 @@ class PostController extends Controller {
 	 */
 	public function index()
 	{
-		$posts = Post::where('is_published', '=', true)->simplePaginate(5);
+		$posts = Post::where('is_published', '=', true)->orderBy('created_at', 'DESC')->simplePaginate(5);
 
 		return view('posts.index', compact('posts'));
 	}
 	public function life()
 	{
-		$posts = Post::whereRaw('is_published = 1 AND category_id = 1')->simplePaginate(5);
+		$posts = Post::whereRaw('is_published = 1 AND category_id = 1')->orderBy('created_at', 'DESC')->simplePaginate(5);
 
 		return view('posts.index', compact('posts'));
 	}
 	public function code()
 	{
-		$posts = Post::whereRaw('is_published = 1 AND category_id = 2')->simplePaginate(5);
+		$posts = Post::whereRaw('is_published = 1 AND category_id = 2')->orderBy('created_at', 'DESC')->simplePaginate(5);
 
 		return view('posts.index', compact('posts'));
 	}
 	public function about()
 	{
-		$posts = Post::whereRaw('is_published = 1 AND category_id = 3')->simplePaginate(5);
+		$posts = Post::whereRaw('is_published = 1 AND category_id = 3')->orderBy('created_at', 'DESC')->simplePaginate(5);
 
 		return view('posts.index', compact('posts'));
 	}
