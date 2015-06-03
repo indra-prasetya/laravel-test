@@ -1,4 +1,4 @@
-Redirect 301 /2009/06/simple-wordpress-ajax-shoutbox/ http://socialenemy.com/code
+Redirect 301 /2009/06/simple-wordpress-ajax-shoutbox /code
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
