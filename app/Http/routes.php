@@ -36,9 +36,9 @@ Route::get('/sitemap.xml', function(){
 	}
 
 	return $sitemap->render('xml');
-	});
+});
 
-	Route::controllers([
-		'auth' => 'Auth\AuthController',
-		//'password' => 'Auth\PasswordController',
-	]);
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	//'password' => 'Auth\PasswordController',
+]);

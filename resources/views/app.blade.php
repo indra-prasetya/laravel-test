@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ isset($is_post)  ? $post->title : "indra.prasetya" }}</title>
+        <meta name="description" content="{{ isset($is_post)  ? $post->description : 'Personal blog by Indra Prasetya' }}">
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ elixir('css/application.css') }}" rel="stylesheet">
