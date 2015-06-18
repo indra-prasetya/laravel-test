@@ -33,23 +33,23 @@ class PostController extends Controller {
 	public function life()
 	{
 		$posts = Post::whereRaw('is_published = 1 AND category_id = 1')->orderBy('created_at', 'DESC')->simplePaginate(5);
-        $post = new stdClass();
-        $post->title = 'indra.prasetya - Life';
-		return view('posts.index', compact('posts', 'post'));
+        //$post = new stdClass();
+        //$post->title = 'indra.prasetya - Life';
+		return view('posts.index', compact('posts'));
 	}
 	public function code()
 	{
 		$posts = Post::whereRaw('is_published = 1 AND category_id = 2')->orderBy('created_at', 'DESC')->simplePaginate(5);
-        $post = new stdClass();
-        $post->title = 'indra.prasetya - Code';
-		return view('posts.index', compact('posts', 'post'));
+        //$post = new stdClass();
+        //$post->title = 'indra.prasetya - Code';
+		return view('posts.index', compact('posts'));
 	}
 	public function about()
 	{
 		$posts = Post::whereRaw('is_published = 1 AND category_id = 3')->orderBy('created_at', 'DESC')->simplePaginate(5);
-        $post = new stdClass();
-        $post->title = 'indra.prasetya - About';
-		return view('posts.index', compact('posts', 'post'));
+        //$post = new stdClass();
+        //$post->title = 'indra.prasetya - About';
+		return view('posts.index', compact('posts'));
 	}
 
 	/**
