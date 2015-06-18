@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ isset($is_post)  ? $post->title : "indra.prasetya" }}</title>
+        <title>{{ isset($is_post) ? $post->title : (isset($title) ? $title : "indra.prasetya") }}</title>
         <meta name="description" content="{{ isset($is_post)  ? $post->description : 'Personal blog by Indra Prasetya' }}">
 
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
                     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                         <div class='site-heading post-heading'>
                             <h1>
-                                {{ isset($is_post)  ? $post->title : "indra.prasetya" }}
+                                {{ isset($is_post)  ? $post->title : (isset($title) ? $title : "indra.prasetya") }}
                             </h1>
                             <hr class='small'>
                             <span class='subheading small'>
