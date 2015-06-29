@@ -93,5 +93,5 @@ To stop tailing the logs, press *Ctrl + c*.
     ```
 
 ## Additional Resources ##
-Documentation for the Laravel framework can be found on the [Laravel website](http://laravel.com/docs). Check 
+Documentation for the Laravel framework can be found on the [Laravel website](http://laravel.com/docs). Also check 
 out OpenShift's [Developer Portal](https://developers.openshift.com/en/php-overview.html) for help running PHP on OpenShift.
