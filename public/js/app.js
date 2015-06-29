@@ -5,8 +5,6 @@ jQuery(function($) {
   $(document).on('page:restore', function() { NProgress.remove(); });
   
   $('[data-toggle="tooltip"]').tooltip();
-  
-  $("html").niceScroll();
 });
 
 NProgress.configure({
