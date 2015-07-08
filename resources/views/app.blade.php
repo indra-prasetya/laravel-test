@@ -7,7 +7,6 @@
         <title>{{ isset($is_post) ? $post->title : (isset($title) ? $title : "indra.prasetya") }}</title>
         <meta name="description" content="{{ isset($is_post)  ? $post->description : 'Personal blog by Indra Prasetya' }}">
 
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ elixir('css/application.css') }}" rel="stylesheet">
 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -19,8 +18,6 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="{{ elixir('js/application.js') }}"></script>
         
         @unless ( Auth::guest() )

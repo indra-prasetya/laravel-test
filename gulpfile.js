@@ -15,12 +15,15 @@ elixir(function(mix) {
     mix.less('app.less');
     
     mix.styles([
-        'app.css',
-        'clean-blog.css',
-        'nprogress.css'
+        'new-blog.css',
+        //'app.css',
+        //'clean-blog.css',
+        //'nprogress.css'
     ], 'public/css/application.css', 'public/css');
     
-    mix.scripts([        
+    mix.scripts([
+        'jquery.min.js',
+        'bootstrap.min.js',
         'jquery.turbolinks.js',
         'turbolinks.js',
         'nprogress.js',
