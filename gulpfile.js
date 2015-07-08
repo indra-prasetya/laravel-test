@@ -15,10 +15,10 @@ elixir(function(mix) {
     mix.less('app.less');
     
     mix.styles([
-        'new-blog.css',
-        //'app.css',
-        //'clean-blog.css',
-        //'nprogress.css'
+        //'bootstrap.min.css',
+        'app.css',
+        'clean-blog.css',
+        'nprogress.css'
     ], 'public/css/application.css', 'public/css');
     
     mix.scripts([
