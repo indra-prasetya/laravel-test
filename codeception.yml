@@ -12,6 +12,6 @@ modules:
     config:
         Db:
             dsn: ''
-            user: ''
-            password: ''
+            user: 'root'
+            password: 'root'
             dump: tests/_data/dump.sql
