@@ -87,6 +87,13 @@ fi
 echo 1>&2
 echo "Running 'php artisan migrate --force'..." 1>&2
 echo 1>&2
+echo 1>&2
+echo "Setting up cache" 1>&2
+cd $OPENSHIFT_REPO_DIR ; 
+php artisan config:cache;
+php artisan route:cache;
+php artisan optimize --force;
+echo 1>&2
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
 php artisan migrate --force
 php artisan db:seed
