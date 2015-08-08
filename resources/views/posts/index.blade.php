@@ -21,7 +21,7 @@
 	            <hr>
 	            @endforeach
 	
-	            {{$posts->render()}}
+	            <?php echo $posts->render(); ?>
 	        </div>
 	    </div>
 	</div>
