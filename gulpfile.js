@@ -19,7 +19,7 @@ elixir(function(mix) {
         'app.css',
         'clean-blog.css',
         'nprogress.css'
-    ], 'public/css/application.css', 'public/css');
+    ], 'public/css/application.css', 'resources/css');
     
     mix.scripts([
         'jquery.min.js',
@@ -29,7 +29,7 @@ elixir(function(mix) {
         'nprogress.js',
         'clean-blog.js',
         'app.js'
-    ], 'public/js/application.js', 'public/js');
+    ], 'public/js/application.js', 'resources/js');
     
     mix.version(["public/js/application.js", "public/css/application.css"]);
 });

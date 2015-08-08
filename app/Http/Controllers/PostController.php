@@ -17,7 +17,7 @@ class PostController extends Controller {
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index','life','code','about','show']]);
+        $this->middleware('auth', ['except' => ['index','life','code','about','show', 'sitemap']]);
     }
 	
 	/**
@@ -164,5 +164,11 @@ class PostController extends Controller {
 		}
 		
 		return $sitemap->render('xml');
+	}
+	
+	public function info()
+	{
+		phpinfo();
+		exit();
 	}
 }
