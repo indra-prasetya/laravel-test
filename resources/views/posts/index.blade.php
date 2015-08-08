@@ -21,11 +21,7 @@
 	            <hr>
 	            @endforeach
 	
-	            <ul class="pager">
-	                <li class="next">
-	                    {{$posts->render()}}
-	                </li>
-	            </ul>
+	            {{$posts->render()}}
 	        </div>
 	    </div>
 	</div>
