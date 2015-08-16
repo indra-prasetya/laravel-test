@@ -22,7 +22,7 @@ return [
 	|
 	*/
 
-	'driver' => env('SESSION_DRIVER', 'file'),
+	'driver' => env('SESSION_DRIVER', 'apc'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -115,7 +115,7 @@ return [
 	|
 	*/
 
-	'cookie' => 'laravel_session',
+	'cookie' => '_ror_backend_session',
 
 	/*
 	|--------------------------------------------------------------------------

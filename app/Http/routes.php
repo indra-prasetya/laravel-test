@@ -28,6 +28,6 @@ Route::resource("posts","PostController");
 Route::get('/sitemap.xml',"SitemapController@index")->before('cache.fetch')->after('cache.put');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
+	'manage' => 'Auth\AuthController',
 	//'password' => 'Auth\PasswordController',
 ]);
