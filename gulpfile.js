@@ -27,7 +27,7 @@ elixir(function(mix) {
         'jquery.turbolinks.js',
         'turbolinks.js',
         'nprogress.js',
-        'clean-blog.js',
+        //'clean-blog.js',
         'app.js'
     ], 'public/js/application.js', 'resources/js');
     
