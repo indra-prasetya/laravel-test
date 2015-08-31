@@ -3,9 +3,9 @@
 @section('content')
 	<div class="container">
 	    <div class="row">
-	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" itemscope itemtype="http://schema.org/BlogPosting">
+	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	            @foreach($posts as $post)
-	            <div class="post-preview">
+	            <div class="post-preview" itemscope itemtype="http://schema.org/BlogPosting">
 	                <a href="{{ url('post/' . $post->slug) }}">
 	                    <h2 class="post-title" itemprop="name headline">
 	                        {{$post->title}} 
