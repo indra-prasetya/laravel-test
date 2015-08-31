@@ -102,7 +102,7 @@
 
                             </ul>
                             <p class='copyright text-muted'>
-                                <i class="fa fa-code"></i> with <em>Laravel</em> on <em>OpenShift</em>
+                                <i class="fa fa-code"></i> <!-- with Ruby on Rails, -->hosted on <em>OpenShift</em>
                             </p>
                             @unless ( Auth::guest() )
                             <p class='text-center' style='font-size: 12px;'>
@@ -118,6 +118,5 @@
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-8894440-1', 'auto');ga('send', 'pageview');
         </script>
-        <!-- weird tag below to prevent Speedy injects their ads script, shame on them! -->
     </boDy>
 </html>
