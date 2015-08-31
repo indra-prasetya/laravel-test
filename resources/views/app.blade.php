@@ -21,7 +21,7 @@
         <script src="{{ elixir('js/application.js') }}"></script>
 
         @unless ( Auth::guest() )
-        <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+        <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
         @endunless
     </head>
     <body>
