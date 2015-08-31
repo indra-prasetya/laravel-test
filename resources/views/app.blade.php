@@ -25,8 +25,8 @@
         @endunless
     </head>
     <body>
-        <div itemscope itemtype="http://schema.org/Article">
-            <nav class='navbar navbar-default navbar-custom navbar-fixed-top'>
+        <div itemscope itemtype="http://schema.org/BlogPosting">
+            <nav class='navbar navbar-default navbar-custom navbar-fixed-top' itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <div class='container-fluid'>
                     <div class='navbar-header page-scroll'>
                         <button class='navbar-toggle' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
@@ -40,16 +40,16 @@
                     <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
                         <ul class='nav navbar-nav navbar-right'>
                             <li>
-                                <a href='{{ url('/') }}'>Home</a>
+                                <a itemprop="url" href='{{ url('/') }}'><span itemprop="name">Home</span></a>
                             </li>
                             <li>
-                                <a href='{{ url('/life') }}'>Life</a>
+                                <a itemprop="url" href='{{ url('/life') }}'><span itemprop="name">Life</span></a>
                             </li>
                             <li>
-                                <a href='{{ url('/code') }}'>Code</a>
+                                <a itemprop="url" href='{{ url('/code') }}'><span itemprop="name">Code</span></a>
                             </li>
                             <li>
-                                <a href='{{ url('/about') }}'>About</a>
+                                <a itemprop="url" href='{{ url('/about') }}'><span itemprop="name">About</span></a>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +60,7 @@
                     <div class='row'>
                         <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
                             <div class='site-heading post-heading'>
-                                <h1 itemprop="name">
+                                <h1 itemprop="name headline">
                                     {{ isset($is_post)  ? $post->title : (isset($title) ? $title : "indra.prasetya") }}
                                 </h1>
                                 <hr class='small'>
@@ -68,8 +68,8 @@
                                     {!! isset($is_post)  ? $post->description : "// <span style='color:#E2AC4F'>TODO</span>: Some kickass tagline here" !!}
                                 </span>
                                 @if ( isset($is_post) )
-                                <span itemprop="author" itemscope itemtype="http://schema.org/Person" class='meta'>
-                                    Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK" itemprop="url"><span itemprop="name">Indra</span></a>, <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}" datetime="{{$post->created_at}}" itemprop="datePublished"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
+                                <span class='meta'>
+                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK" itemprop="url" rel="author"><span itemprop="name">Indra Prasetya</span></a></span>, <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}" datetime="{{$post->created_at}}" itemprop="datePublished"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
                                 </span>
                                 @endif
                             </div>
@@ -78,7 +78,7 @@
                 </div>
             </header>
 
-            <section id="content" itemprop="articleBody">
+            <section id="content">
                 @yield('content')
             </section>
 

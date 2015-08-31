@@ -4,13 +4,13 @@
     <div class='container'>
         <div class='row'>
             <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-                <article>
+                <article itemprop="articleBody">
                     {!! $post->content !!}
                 </article>
     
                 <hr/>
     
-                <div id='disqus_thread'></div>
+                <div id='disqus_thread' itemprop="comment"></div>
     
                 <div class='pull-right'>
                     <a class="btn btn-primary" href="{{ URL::previous() }}">Back</a>    
