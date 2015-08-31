@@ -56,7 +56,9 @@
         $("#post_content_label").popover();
     });
     tinymce.init({
-        selector: "#post_content"
+        selector: "#post_content",
+        plugins: "code image table",
+        tools: "inserttable"
     });
 </script>
 @endsection
