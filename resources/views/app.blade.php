@@ -69,7 +69,7 @@
                                 </span>
                                 @if ( isset($is_post) )
                                 <span class='meta'>
-                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK" itemprop="url" rel="author"><span itemprop="name">Indra Prasetya</span></a></span>, <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}" datetime="{{$post->created_at}}" itemprop="datePublished"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
+                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK" itemprop="url" rel="author"><span itemprop="name">Indra Prasetya</span></a></span>, <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}"> <meta itemprop="datePublished" content="{{$post->created_at}}">{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
                                 </span>
                                 @endif
                             </div>
