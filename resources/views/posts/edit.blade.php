@@ -55,12 +55,10 @@
             text = text.replace(/[^a-zA-Z0-9]+/g, '-');
             $("#slug").val(text);
         });
+        $('#post_content').summernote({
+            height: 200
+        });
         $("#post_content_label").popover();
-    });
-    tinymce.init({
-        selector: "#post_content",
-        plugins: "code image table",
-        tools: "inserttable"
     });
 </script>
 @endsection

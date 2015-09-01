@@ -20,8 +20,9 @@
 
         <script src="{{ elixir('js/application.js') }}"></script>
 
-        @unless ( Auth::guest() )
-        <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+        @unless ( Auth::guest() )      
+        {{ HTML::style('css/summernote.min.css'); }}
+        {{ HTML::script('js/summernote.min.js'); }}
         @endunless
     </head>
     <body>
