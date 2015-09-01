@@ -21,8 +21,8 @@
         <script src="{{ elixir('js/application.js') }}"></script>
 
         @unless ( Auth::guest() )      
-        {!! HTML::style('css/summernote.min.css'); !!}
-        {!! HTML::script('js/summernote.min.js'); !!}
+        <link href="/css/summernote.min.css" rel="stylesheet">
+        <script src="/js/summernote.min.js"></script>
         @endunless
     </head>
     <body>
