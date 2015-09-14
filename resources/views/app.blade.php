@@ -14,15 +14,15 @@
         <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script async src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script async src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="{{ elixir('js/application.js') }}"></script>
+        <script async src="{{ elixir('js/application.js') }}"></script>
 
         @unless ( Auth::guest() )      
         <link href="/css/summernote.min.css" rel="stylesheet">
-        <script src="/js/summernote.min.js"></script>
+        <script async src="/js/summernote.min.js"></script>
         @endunless
     </head>
     <body>
