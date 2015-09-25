@@ -6231,5 +6231,10 @@ label,
 .checkbox label {
   font-weight: 300;
 }
-
+.header-image-low {
+	background-image: url('../../img/home-bg.min.jpg');
+}
+.header-image {
+	background-image: url('../../img/home-bg.jpg');
+}
 /*# sourceMappingURL=app.css.map */
