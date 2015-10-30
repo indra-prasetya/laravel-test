@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +21,8 @@
         <script async src="{{ elixir('js/application.min.js') }}"></script>
 
         @unless ( Auth::guest() )      
-        <link href="/css/summernote.min.css" rel="stylesheet">
-        <script async src="/js/summernote.min.js"></script>
+        <link href="/css/trumbowyg.min.css" rel="stylesheet">
+        <script async src="/js/trumbowyg.min.js"></script>
         @endunless
     </head>
     <body>
@@ -70,7 +70,7 @@
                                 </span>
                                 @if ( isset($is_post) )
                                 <span class='meta'>
-                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK" itemprop="url" rel="author"><span itemprop="name">Indra Prasetya</span></a></span>, <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}"> <meta itemprop="datePublished" content="{{$post->created_at}}">{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span>
+                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <a href="https://plus.google.com/117790626314138048409?prsrc=5" target="_BLANK" itemprop="url" rel="author"><span itemprop="name">Indra Prasetya</span></a></span>, <span data-toggle="tooltip" data-placement="right" title="{{$post->created_at}}"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }} </span><meta itemprop="datePublished" content="{{$post->created_at}}">
                                 </span>
                                 @endif
                             </div>
