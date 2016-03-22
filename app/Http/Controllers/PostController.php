@@ -80,7 +80,7 @@ class PostController extends Controller
         $post->category_id = $request->input("category_id");
         $post->slug = $request->input("slug");
         $post->description = $request->input("description");
-        $post->content = $request->input("content");
+        $post->content = str_replace('<img', '<img itemprop="image"', $request->input("content"));
         $post->is_published = $request->input("is_published");
 
         $post->save();

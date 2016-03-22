@@ -55,9 +55,10 @@
             text = text.replace(/[^a-zA-Z0-9]+/g, '-');
             $("#slug").val(text);
         });
-        $('#post_content').summernote({
-            height: 200
-        });
+        $('#post_content').trumbowyg({
+		    semantic: true,
+		    autogrow: true
+		});
         $("#post_content_label").popover();
     });
 </script>
